@@ -29,10 +29,10 @@ const CTA = () => {
           © {new Date().getFullYear()} All rights reserved.
         </div>
         <div className="flex gap-4">
-          <a href="mailto:zain.ul.abdin558120@gmail.com" className="text-gray-700 hover:text-gray-800 flex items-center gap-2">
+          <a href="mailto:zain.ul.abdin558120@gmail.com" className="text-gray-700 hover:text-yellow-600 flex items-center text-2xl gap-2">
             <FaEnvelope />
           </a>
-          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-gray-800 flex items-center gap-2">
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="text-gray-700  text-2xl hover:text-blue-800 flex items-center gap-2">
             <FaLinkedin />
           </a>
         </div>      </div>
