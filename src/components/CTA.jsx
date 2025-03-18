@@ -22,7 +22,7 @@ const CTA = () => {
             </a>
             <a
               href="#"
-              className="px-6 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition-colors flex items-center gap-2"
+              className="px-6 py-3 bg-white text-black border-[.2px] border-gray-800  hover:text-white rounded-full hover:bg-gray-800 transition-colors flex items-center gap-2"
             >
               <FaPhone /> Book a Call
             </a>
