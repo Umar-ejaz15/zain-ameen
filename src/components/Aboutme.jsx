@@ -1,6 +1,8 @@
 import React from "react";
+import LocomotiveScroll from "locomotive-scroll";
 
 const Aboutme = () => {
+  const locomotiveScroll = new LocomotiveScroll();
   return (
     <div className="w-full h-auto bg-white md:rounded-b-[170px] px-4 md:px-16 py-10">
       <div className="max-w-6xl mx-auto">

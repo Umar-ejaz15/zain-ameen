@@ -1,6 +1,8 @@
 import React from "react";
+import LocomotiveScroll from "locomotive-scroll";
 
 const Main = () => {
+  const locomotiveScroll = new LocomotiveScroll();
   return (
     <main>
       <div className="w-full min-h-screen py-15 bg-[#F4F3F2] rounded-b-[100px] md:rounded-b-[170px]  hero flex flex-col  items-center justify-center">

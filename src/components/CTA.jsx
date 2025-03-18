@@ -1,11 +1,10 @@
 import React from "react";
-import {
-  FaHandshake,
-  FaEnvelope,
-  FaPhone,
-} from "react-icons/fa";
+import LocomotiveScroll from "locomotive-scroll";
+
+import { FaHandshake, FaEnvelope, FaPhone } from "react-icons/fa";
 
 const CTA = () => {
+  const locomotiveScroll = new LocomotiveScroll();
   return (
     <>
       <div className="w-full h-screen flex flex-col items-center justify-center py-12 bg-white rounded-t-[170px]">

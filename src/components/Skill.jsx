@@ -1,7 +1,9 @@
 import React from "react";
 import Tilt from "react-parallax-tilt";
+import LocomotiveScroll from "locomotive-scroll";
 
 const Skill = () => {
+  const locomotiveScroll = new LocomotiveScroll();
   const data = [
     {
       icon: "🚀",
@@ -39,10 +41,18 @@ const Skill = () => {
         <div className="h-[1px] w-full bg-zinc-300"></div>
       </div>
       <div className=" flex justify-center items-center">
-        <div className="cards w-full px-5 md:px-20 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 items-baseline justify-items-center">
+        <div className="cards w-full px-5 md:px-20 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 items-baseline justify-items-center">
           {data.map((item, index) => (
-            <Tilt key={index} tiltMaxAngleX={5} tiltMaxAngleY={5} perspective={800} transitionSpeed={1500} scale={1} gyroscope={true}>
-              <div className="card w-full max-w-md border-[.2px] p-8 border-gray-600/60 rounded-lg hover:shadow-lg transition-all duration-300 group flex flex-col gap-6 h-[450px] hover:scale-105">
+            <Tilt
+              key={index}
+              tiltMaxAngleX={5}
+              tiltMaxAngleY={5}
+              perspective={800}
+              transitionSpeed={1500}
+              scale={1}
+              gyroscope={true}
+            >
+              <div className="card w-full max-w-md border-[.2px] p-2 border-gray-600/60 rounded-lg hover:shadow-lg transition-all duration-300 group flex flex-col gap-10 h-[390px] hover:scale-105">
                 <div className="icon text-5xl grayscale group-hover:grayscale-1 text-center">
                   {item.icon}
                 </div>

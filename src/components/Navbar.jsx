@@ -48,7 +48,10 @@ const Navbar = () => {
                 </li>
               </div>
             </ul>
-            <button onClick={handleDownloadCV} className="px-8 text-sm font-medium rounded-md py-3 border-[.2px] border-gray-800 hover:bg-gray-800 hover:text-white">
+            <button
+              onClick={handleDownloadCV}
+              className="px-8 text-sm font-medium rounded-md py-3 border-[.2px] border-gray-800 hover:bg-gray-800 hover:text-white"
+            >
               Get My CV
             </button>
           </div>
@@ -103,7 +106,10 @@ const Navbar = () => {
           >
             Portfolio
           </a>
-          <button onClick={handleDownloadCV} className="w-full text-sm font-medium rounded-md py-3 border-[.2px] border-gray-800 hover:bg-gray-800 hover:text-white">
+          <button
+            onClick={handleDownloadCV}
+            className="w-full text-sm font-medium rounded-md py-3 border-[.2px] border-gray-800 hover:bg-gray-800 hover:text-white"
+          >
             Get My CV
           </button>
         </div>
