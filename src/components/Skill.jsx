@@ -50,7 +50,6 @@ const Skill = () => {
               perspective={800}
               transitionSpeed={1500}
               scale={1}
-              gyroscope={true}
             >
               <div className="card w-full max-w-md border-[.2px] p-2 border-gray-600/60 rounded-lg hover:shadow-lg transition-all duration-300 group flex flex-col gap-10 h-[390px] hover:scale-105">
                 <div className="icon text-5xl grayscale group-hover:grayscale-1 text-center">
