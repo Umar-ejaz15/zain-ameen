@@ -13,3 +13,15 @@
   --color-blue-900: #121F3E;
   --color-blue-500: #0000EE;
 }
+@media (min-width: 1024px) { /* Target large screens (lg:grid-cols-3) */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  /* If there are only two items in the last row, center them */
+  .cards > :nth-last-child(2):nth-child(odd) {
+    grid-column: 2 / span 2; /* Move the second last item to start from column 2 */
+  }
+}
+

@@ -2,9 +2,7 @@ import React from "react";
 import {
   FaHandshake,
   FaEnvelope,
-  FaWhatsapp,
-  FaLinkedin,
-  FaInstagram,
+  FaPhone,
 } from "react-icons/fa";
 
 const CTA = () => {
@@ -24,37 +22,17 @@ const CTA = () => {
               <FaEnvelope /> Email Me
             </a>
             <a
-              href="https://wa.me/yourphonenumber"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 bg-white border-2 border-gray-500 text-black rounded-full hover:bg-gray-600 hover:text-white transition-colors flex items-center gap-2"
+              href="#"
+              className="px-6 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition-colors flex items-center gap-2"
             >
-              <FaWhatsapp /> WhatsApp
+              <FaPhone /> Book a Call
             </a>
           </div>
         </div>
       </div>
-      <div className="flex flex-col sm:flex-row justify-between bg-white items-center px-10 py-4 gap-4 mt-8">
-        <div className=" text-sm text-gray-900">
+      <div className="flex justify-center bg-white items-center px-10 py-4">
+        <div className="text-sm text-gray-900">
           © {new Date().getFullYear()} All rights reserved.
-        </div>
-        <div className="flex gap-4 justify-center items-center">
-          <a
-            href="https://linkedin.com/in/yourprofile"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-600 hover:text-gray-800 transition-colors flex items-center gap-1"
-          >
-            <FaLinkedin /> LinkedIn
-          </a>
-          <a
-            href="https://instagram.com/yourprofile"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-600 hover:text-gray-800 transition-colors flex items-center gap-1"
-          >
-            <FaInstagram /> Instagram
-          </a>
         </div>
       </div>
     </>

@@ -3,20 +3,6 @@ import { useState } from "react";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleCopyEmail = () => {
-    navigator.clipboard
-      .writeText("zain.ul.abdin558120@gmail.com")
-      .then(() => {
-        const notification = document.createElement("div");
-        notification.textContent = "Email copied!";
-        notification.style.cssText =
-          "position:fixed;top:20px;left:50%;transform:translate(-50%, -50%);padding:10px;background:#333;color:white;border-radius:5px;";
-        document.body.appendChild(notification);
-        setTimeout(() => document.body.removeChild(notification), 2000);
-      })
-      .catch((err) => console.error("Failed to copy:", err));
-  };
-
   const handleDownloadCV = () => {
     window.open("/Zain Ul Abdin PMA CV.pdf", "_blank");
   };
@@ -26,26 +12,21 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0 flex items-center">
-            <div className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-2">
-              <h1 className="text-md sm:text-sm truncate">zain.ul.abdin558120@gmail.com</h1>
-              <div className="flex space-x-2">
-                <button
-                  className="px-10 sm:px-10 text-lg cursor-pointer hover:bg-gray-200 py-1 sm:py-2 bg-white text-black rounded-full transition-colors"
-                  onClick={handleCopyEmail}
-                >
-                  Copy
-                </button>
-                <button
-                  className="px-10 sm:px-10 text-lg cursor-pointer hover:bg-gray-200 py-1 sm:py-2 bg-white text-black rounded-full transition-colors"
-                  onClick={handleDownloadCV}
-                >
-                  CV
-                </button>
+            <div className="left flex flex-col justify-center items-center mb-4 md:mb-0">
+              <div>
+                <h1 className="text-3xl md:text-4xl text-gray-800 font-bold uppercase text-center">
+                  Zain Ul Abdin
+                </h1>
+              </div>
+              <div className="text-[6px] md:text-[7.2px] flex flex-wrap gap-1 justify-center content-center">
+                <h2 className="text-black">Product Marketing Specialist |</h2>
+                <h2 className="text-black">Social Media Marketing | </h2>
+                <h2 className="text-black">Digital Marketing Specialist</h2>
               </div>
             </div>
           </div>
 
-          <div className="hidden md:block">
+          <div className="hidden md:flex gap-3 justify-center items-center">
             <ul className="flex space-x-4 lg:space-x-8">
               <li>
                 <a
@@ -55,27 +36,25 @@ const Navbar = () => {
                   Home
                 </a>
               </li>
-              <li>
-                <a
-                  href="/projects"
-                  className="text-sm lg:text-base hover:text-gray-700 hover:underline transition-colors"
-                >
-                  Projects
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/portfolio"
-                  className="text-sm lg:text-base hover:text-gray-700 hover:underline transition-colors"
-                >
-                  Portfolio
-                </a>
-              </li>
+              <div className="flex gap-2 justify-center items-center">
+                <div className="w-2 h-2 bg-gray-900 rounded-full"></div>
+                <li>
+                  <a
+                    href="/portfolio"
+                    className="text-xs lg:text-base hover:text-gray-700 hover:underline transition-colors"
+                  >
+                    Portfolio
+                  </a>
+                </li>
+              </div>
             </ul>
+            <button onClick={handleDownloadCV} className="px-8 text-sm font-medium rounded-md py-3 border-[.2px] border-gray-800 hover:bg-gray-800 hover:text-white">
+              Get My CV
+            </button>
           </div>
 
-          <button 
-            onClick={() => setIsOpen(!isOpen)} 
+          <button
+            onClick={() => setIsOpen(!isOpen)}
             className="md:hidden p-2 rounded-md hover:bg-gray-100 transition-colors"
             aria-label="Toggle menu"
           >
@@ -111,25 +90,22 @@ const Navbar = () => {
           isOpen ? "block" : "hidden"
         } md:hidden absolute w-full bg-[#F4F3F2] shadow-lg`}
       >
-        <div className="px-4 pt-2 pb-4 space-y-2">
+        <div className="px-4 py-3 space-y-4">
           <a
             href="/"
-            className="block px-3 py-2 rounded-md text-base hover:bg-gray-100 transition-colors"
+            className="block text-sm hover:text-gray-700 hover:underline transition-colors"
           >
             Home
           </a>
           <a
-            href="/projects"
-            className="block px-3 py-2 rounded-md text-base hover:bg-gray-100 transition-colors"
-          >
-            Projects
-          </a>
-          <a
             href="/portfolio"
-            className="block px-3 py-2 rounded-md text-base hover:bg-gray-100 transition-colors"
+            className="block text-sm hover:text-gray-700 hover:underline transition-colors"
           >
             Portfolio
           </a>
+          <button onClick={handleDownloadCV} className="w-full text-sm font-medium rounded-md py-3 border-[.2px] border-gray-800 hover:bg-gray-800 hover:text-white">
+            Get My CV
+          </button>
         </div>
       </div>
     </nav>
