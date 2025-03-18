@@ -14,7 +14,7 @@ const Aboutme = () => {
           <div className="h-[1px] w-1/2 bg-zinc-300"></div>
         </div>{" "}
         <div className="text-[#2A2A2A] space-y-6 text-base md:text-lg">
-          <p className="text-xl md:text-5xl">
+          <p className="text-xl md:text-2xl">
             This is Zain Ul Abdin, a{" "}
             <strong>Product Marketing Specialist</strong> &{" "}
             <strong>Growth Strategist</strong> who lives and breathes{" "}
@@ -27,7 +27,7 @@ const Aboutme = () => {
           <div className="space-y-4">
             <div className="flex items-start">
               <span className="text-xl md:text-2xl mr-2">🚀</span>
-              <p className="text-xl md:text-2xl">
+              <p className="text-xl md:text-xl">
                 Scaled <strong>Blainy</strong> to{" "}
                 <strong>50,000+ organic users</strong> and{" "}
                 <strong>200+ paying customers</strong> in just a year—NO ads, NO
@@ -40,7 +40,7 @@ const Aboutme = () => {
 
             <div className="flex items-start">
               <span className="text-xl md:text-2xl mr-2">📈</span>
-              <p className="text-xl md:text-2xl">
+              <p className="text-xl md:text-xl">
                 Delivered <strong>4,600+ conversions</strong> via Reddit in just
                 5 months, consistently driving <strong>10x ROI</strong> while
                 others were still figuring out how to post.
@@ -49,7 +49,7 @@ const Aboutme = () => {
 
             <div className="flex items-start">
               <span className="text-xl md:text-2xl mr-2">🚀</span>
-              <p className="text-xl md:text-2xl">
+              <p className="text-xl md:text-xl">
                 Want proof? Check the <strong>case studies</strong>. Or better
                 yet, let's make YOUR business the next success story.
               </p>

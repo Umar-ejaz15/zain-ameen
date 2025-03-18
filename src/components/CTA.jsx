@@ -1,7 +1,7 @@
 import React from "react";
 import LocomotiveScroll from "locomotive-scroll";
 
-import { FaHandshake, FaEnvelope, FaPhone } from "react-icons/fa";
+import { FaHandshake, FaEnvelope, FaPhone, FaLinkedin } from "react-icons/fa";
 
 const CTA = () => {
   const locomotiveScroll = new LocomotiveScroll();
@@ -14,12 +14,7 @@ const CTA = () => {
         </div>
         <div>
           <div className="flex flex-col sm:flex-row gap-4">
-            <a
-              href="mailto:zain.ul.abdin558120@gmail.com"
-              className="px-6 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition-colors flex items-center gap-2"
-            >
-              <FaEnvelope /> Email Me
-            </a>
+         
             <a
               href="#"
               className="px-6 py-3 bg-white text-black border-[.2px] border-gray-800  hover:text-white rounded-full hover:bg-gray-800 transition-colors flex items-center gap-2"
@@ -29,11 +24,20 @@ const CTA = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center bg-white items-center px-10 py-4">
+      <div className="flex justify-between bg-white items-center px-10 py-4">
         <div className="text-sm text-gray-900">
           © {new Date().getFullYear()} All rights reserved.
         </div>
-      </div>
+        <div className="flex gap-4">
+          <a href="mailto:zain.ul.abdin558120@gmail.com" className="text-gray-900 hover:text-gray-800 flex items-center gap-2">
+            <FaEnvelope />
+            Email Me 
+          </a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="text-gray-900 hover:text-gray-800 flex items-center gap-2">
+            <FaLinkedin />
+            LinkedIn
+          </a>
+        </div>      </div>
     </>
   );
 };

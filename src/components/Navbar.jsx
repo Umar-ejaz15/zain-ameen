@@ -19,15 +19,13 @@ const Navbar = () => {
                 </h1>
               </div>
               <div className="text-[6px] md:text-[7.2px] flex flex-wrap gap-1 justify-center content-center">
-                <h2 className="text-black">Product Marketing Specialist |</h2>
-                <h2 className="text-black">Social Media Marketing | </h2>
-                <h2 className="text-black">Digital Marketing Specialist</h2>
+               
               </div>
             </div>
           </div>
 
           <div className="hidden md:flex gap-3 justify-center items-center">
-            <ul className="flex space-x-4 lg:space-x-8">
+            <ul className="flex space-x-4 lg:space-x-3">
               <li>
                 <a
                   href="/"
