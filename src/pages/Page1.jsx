@@ -6,6 +6,7 @@ import Aboutme from '../components/Aboutme'
 import Skill from '../components/Skill'
 import CTA from '../components/CTA'
 import LocomotiveScroll from 'locomotive-scroll';
+import Skills from '../components/Skills'
 
 
 const Page1 = () => {
@@ -23,7 +24,7 @@ const Page1 = () => {
       <Navbar/>
       <Main/>
       <Aboutme/>
-      
+      <Skills/>
       <Skill/>
       <CTA/>
     </div>

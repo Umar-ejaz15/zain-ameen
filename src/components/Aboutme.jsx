@@ -1,5 +1,8 @@
 import React from "react";
 import LocomotiveScroll from "locomotive-scroll";
+import { FaRocket } from "react-icons/fa";
+import { BiTrendingUp } from "react-icons/bi";
+import { BsFileEarmarkText } from "react-icons/bs";
 
 const Aboutme = () => {
   const locomotiveScroll = new LocomotiveScroll();
@@ -26,7 +29,7 @@ const Aboutme = () => {
 
           <div className="space-y-4">
             <div className="flex items-start">
-              <span className="text-xl md:text-2xl mr-2">🚀</span>
+              <FaRocket className="text-2xl md:text-3xl mr-2 text-blue-600" />
               <p className="text-xl md:text-xl">
                 Scaled <strong>Blainy</strong> to{" "}
                 <strong>50,000+ organic users</strong> and{" "}
@@ -39,7 +42,7 @@ const Aboutme = () => {
             </div>
 
             <div className="flex items-start">
-              <span className="text-xl md:text-2xl mr-2">📈</span>
+              <BiTrendingUp className="text-2xl md:text-3xl mr-2 text-green-600" />
               <p className="text-xl md:text-xl">
                 Delivered <strong>4,600+ conversions</strong> via Reddit in just
                 5 months, consistently driving <strong>10x ROI</strong> while
@@ -48,7 +51,7 @@ const Aboutme = () => {
             </div>
 
             <div className="flex items-start">
-              <span className="text-xl md:text-2xl mr-2">🚀</span>
+              <BsFileEarmarkText className="text-2xl md:text-3xl mr-2 text-purple-600" />
               <p className="text-xl md:text-xl">
                 Want proof? Check the <strong>case studies</strong>. Or better
                 yet, let's make YOUR business the next success story.
