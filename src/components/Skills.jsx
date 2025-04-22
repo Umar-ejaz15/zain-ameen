@@ -10,6 +10,7 @@ import {
   FaCogs,
   FaReddit,
 } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Skills = () => {
   const skillsList = [
@@ -27,29 +28,65 @@ const Skills = () => {
 
   return (
     <>
-     <div className="text-center text-sm flex justify-center items-center py-10">
-          <div className="h-[1px] w-1/2 bg-zinc-300"></div>
-          <h1 className="px-6 md:px-10 w-32 md:w-40 py-2 md:py-3 rounded-md -rotate-12 text-black bg-zinc-300 text-xs md:text-sm font-medium">
+     <motion.div 
+       initial={{  y: -20 }}
+       whileInView={{  y: 0 }}
+       
+       viewport={{ once: false }}
+       transition={{ duration: 0.6, ease: "easeOut" }}
+       className="text-center text-sm flex justify-center items-center py-10">
+          <motion.div 
+            initial={{ width: 0 }}
+            whileInView={{ width: "50%" }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.8 }}
+            className="h-[1px] bg-zinc-300"></motion.div>
+          <motion.h1 
+            initial={{ rotate: 0, scale: 0.5, opacity: 0 }}
+            whileInView={{ rotate: -12, scale: 1, opacity: 1 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="px-6 md:px-10 w-32 md:w-40 py-2 md:py-3 rounded-md text-black bg-zinc-300 text-xs md:text-sm font-medium">
             Skills
-          </h1>
-          <div className="h-[1px] w-1/2 bg-zinc-300"></div>
-        </div>{" "}
-    <div className="w-full py-20 px-4 bg-white">
+          </motion.h1>
+          <motion.div 
+            initial={{ width: 0 }}
+            whileInView={{ width: "50%" }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.8 }}
+            className="h-[1px] bg-zinc-300"></motion.div>
+        </motion.div>{" "}
+    <motion.div 
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: false }}
+      transition={{ duration: 0.8 }}
+      className="w-full py-20 px-4 bg-white">
      
       <div className="max-w-[1240px] mx-auto">
         <div className="flex flex-wrap justify-center items-center gap-6">
           {skillsList.map((skill, index) => (
-            <div
-            key={index}
-              className="flex items-center bg-white rounded-xl p-5 hover:scale-105 duration-300 cursor-pointer shadow-lg hover:shadow-xl border border-white hover:border-zinc-800 transition-all group"
+            <motion.div
+              initial={{  y: 50, scale: 0.9 }}
+              whileInView={{  y: 0, scale: 1 }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: false, margin: "-50px" }}
+              key={index}
+              className="flex items-center bg-white rounded-xl p-5 cursor-pointer shadow-lg hover:shadow-xl border border-white hover:border-zinc-800 transition-all group"
             >
-              <skill.icon className={`w-8 h-8 mr-4 ${skill.color} group-hover:${skill.color}`} />
+              <motion.div
+                whileHover={{ rotate: 360 }}
+                transition={{ duration: 0.6 }}
+              >
+                <skill.icon className={`w-8 h-8 mr-4 ${skill.color} group-hover:${skill.color}`} />
+              </motion.div>
               <h3 className="font-semibold text-zinc-800">{skill.title}</h3>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
             </>
   );
 };
